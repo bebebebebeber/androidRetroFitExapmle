@@ -26,35 +26,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button = (Button) findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast toast=Toast.makeText(getApplicationContext(),"Btn clicked",Toast. LENGTH_SHORT);
-                toast.show();
-                final TextView textView = findViewById(R.id.textView);
-                NetworkService.getInstance()
-                        .getJSONApi()
-                        .getPostWithID(1)
-                        .enqueue(new Callback<Post>() {
-                            @Override
-                            public void onResponse(@NonNull Call<Post> call, @NonNull Response<Post> response) {
-                                Post post = response.body();
+//        Button button = (Button) findViewById(R.id.button2);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//
+//            }
+//        });
+    }
+    public void onButtonClick(View view) {
+        Toast toast=Toast.makeText(getApplicationContext(),"Btn clicked",Toast. LENGTH_SHORT);
+        toast.show();
+        final TextView textView = findViewById(R.id.textView);
+        NetworkService.getInstance()
+                .getJSONApi()
+                .getPostWithID(1)
+                .enqueue(new Callback<Post>() {
+                    @Override
+                    public void onResponse(@NonNull Call<Post> call, @NonNull Response<Post> response) {
+                        Post post = response.body();
 
-                                textView.append(post.getId() + "\n");
-                                textView.append(post.getUserId() + "\n");
-                                textView.append(post.getTitle() + "\n");
-                                textView.append(post.getBody() + "\n");
-                            }
+                        textView.append(post.getId() + "\n");
+                        textView.append(post.getUserId() + "\n");
+                        textView.append(post.getTitle() + "\n");
+                        textView.append(post.getBody() + "\n");
+                    }
 
-                            @Override
-                            public void onFailure(@NonNull Call<Post> call, @NonNull Throwable t) {
+                    @Override
+                    public void onFailure(@NonNull Call<Post> call, @NonNull Throwable t) {
 
-                                textView.append("Error occurred while getting request!");
-                                t.printStackTrace();
-                            }
-                        });
-            }
-        });
+                        textView.append("Error occurred while getting request!");
+                        t.printStackTrace();
+                    }
+                });
     }
 
 
