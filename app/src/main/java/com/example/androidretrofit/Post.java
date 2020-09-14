@@ -4,48 +4,26 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Post {
-    @SerializedName("userId")
+    @SerializedName("token")
     @Expose
-    private int userId;
-    @SerializedName("id")
+    private String token;
+    @SerializedName("refreshToken")
     @Expose
-    private int id;
-    @SerializedName("title")
-    @Expose
-    private String title;
-    @SerializedName("body")
-    @Expose
-    private String body;
+    private String refreshToken;
 
-    public int getUserId() {
-        return userId;
+    public String getToken() {
+        return token;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    public int getId() {
-        return id;
+    public String getRefreshToken() {
+        return refreshToken;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
     }
 }
