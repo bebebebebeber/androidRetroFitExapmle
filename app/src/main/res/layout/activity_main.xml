@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    =======
-        android:layout_width="274dp"
-        android:layout_height="98dp"
-        android:onClick="onButtonClick"
->>>>>>> 966de6077ff0eea492f4ffff1e3fe2a54f84c63e
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
+<!--    =======-->
+<!--        android:layout_width="274dp"-->
+<!--        android:layout_height="98dp"-->
+<!--        android:onClick="onButtonClick"-->
+<!--&gt;>>>>>> 966de6077ff0eea492f4ffff1e3fe2a54f84c63e-->
+<!--        android:text="Button"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.629" />-->
 
     <EditText
         android:id="@+id/password"
